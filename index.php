@@ -22,24 +22,24 @@
 			crossorigin="anonymous"
 		/>
 		<link rel="stylesheet" href="./css/style.css" />
-		<title>Swear!</title>
+		<title>No Swear!</title>
 </head>
 <body>
 
-<div class="container">
-  <h1 class="text-center">Bad Words!</h1>
-  <p class="text-center">Inserisci del testo nel primo quadrante e ti dirà la lunghezza, il secondo quadrante verrà censurato solo se sarai monello</p>
+<div class="container mt-3 py-5 bg-light">
+  <h1 class="text-center text-uppercase fw-bold">Bad Words!</h1>
+  <p class="text-center bg-secondary text-white">Inserisci del testo nel primo quadrante e ti dirà la lunghezza, il secondo quadrante verrà censurato solo se sarai monello</p>
   <div class="text-center">
     <form action="cancel.php" method="POST">
-      <div>
+      <div class="mb-3">
         <label for="first"></label>
         <input type="text" name="first" id="first" placeholder="Scrivi qui">
       </div>
-      <div>
+      <div class="mb-4">
         <label for="second"></label>
         <input type="text" name="second" id="second" placeholder="Scrivi anche qui">
       </div>
-      <input type="submit" value="Invia">
+      <input type="submit" class="btn btn-outline-dark" value="Invia">
     </form>
   </div>
 </div>

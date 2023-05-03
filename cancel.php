@@ -1,7 +1,18 @@
 <?php
 
+if(isset($_POST['first']) && isset($_POST['second'])) {
 $first = $_POST['first'];
-$second = $_POST['second']
+$second = $_POST['second'];
+} else {
+  $first = 'eh Boh';
+  $second = 'Scrivi qualcosa, Figlio/a di Buona Donna';
+}
+
+$first = $_POST['first'];
+$second = $_POST['second'];
+
+$replace = ['idiota' , 'scemo', 'cretino', 'coglione', 'stupido', 'porco', 'cazzo', 'fanculo',];
+$replaced = ['i***a' , 's***o', 'c***o', 'c***e', 's***o', 'p***o', 'c***o', 'f**o',];
 
 ?>
 
@@ -29,10 +40,10 @@ $second = $_POST['second']
 </head>
 <body>
 
+<div class="container my-5 py-5 bg-light">
 <p class="text-center"><?php echo $first . ' (' . strlen($first) . ' characters)' ?></p>
-<p class="text-center"><?php
-
-echo $second ?></p>
+<p class="text-center"><?php echo str_replace($replace,$replaced,$second) ?></p>
+</div>
 
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 		<script type="text/javascript" src="./js/script.js"></script>
